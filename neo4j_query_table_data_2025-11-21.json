@@ -1,0 +1,522 @@
+[
+  {
+    "n": {
+      "identity": 97,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-1",
+        "raw_text": "بهای واحد ردیفهای این فصل برای انجام کار در هر ارتفاع هر عمق به هر شکل و هر موقعیت است و هیچ گونه بهای جداگانه ای بابت صعوبت کار به استثنا آنچه به صراحت مشخص شده است تعلق نمی گیرد.",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:97"
+    }
+  },
+  {
+    "n": {
+      "identity": 98,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-2",
+        "raw_text": "در صورتی که مصالح حاصل از تخریب و برچیدن مفید باشد... باید طبق دستور مهندس مشاور... تفکیک و مجزا از یکدیگر چیده شوند در این صورت هزینه جداگانه ای... برای دسته بندی کردن آنها تعلق نمی گیرد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"REFER_TO_GROUP\",\n    \"value\": \"0104\",\n    \"message\": \"در صورتی که مصالح حاصل از تخریب و برچیدن مفید باشد، هزینه جداگانه ای برای دسته بندی و تفکیک آنها (موضوع گروه 0104) تعلق نمی گیرد.\"\n  },\n  \"affected_items\": [],\n  \"cross_references\": [\n    \"Group: 0104\"\n  ]\n}\n",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:98"
+    }
+  },
+  {
+    "n": {
+      "identity": 99,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-3",
+        "raw_text": "محل انباشت موقت باید در طرح جانمایی تجهیز کارگاه مشخص گردد و به تایید مهندس مشاور برسد.",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:99"
+    }
+  },
+  {
+    "n": {
+      "identity": 100,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-4",
+        "raw_text": "هزینه جمع آوری، بارگیری و حمل مصالح حاصل از تخریب... تا محل انباشت موقت کارگاه... در بهای ردیفها منظور شده است. در صورتی که... لازم شود مصالح... از محل انباشت موقت کارگاه خارج شود، بهای بارگیری حمل و باراندازی آن طبق ردیفهای... فصل عملیات خاکی با ماشین... محاسبه و منظور میگردد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Reference\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"REFER_TO_CHAPTER\",\n    \"value\": \"03\",\n    \"message\": \"هزینه جمع آوری، بارگیری و حمل مصالح حاصل از تخریب تا محل انباشت موقت کارگاه در بها منظور شده است. اما در صورت نیاز به خروج مصالح از کارگاه، هزینه بارگیری، حمل و باراندازی آن طبق ردیف های فصل عملیات خاکی با ماشین محاسبه می شود.\"\n  },\n  \"affected_items\": [],\n  \"cross_references\": [\n    \"Chapter: 03\"\n  ]\n}\n",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:100"
+    }
+  },
+  {
+    "n": {
+      "identity": 101,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-5",
+        "raw_text": "تمام مصالح حاصل از تخریب و برچیدن متعلق به کارفرماست و خارج کردن آنها از محوطه کارگاه منوط به دستورکار مهندس مشاور و تصویب کارفرما است.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"INFORM\",\n    \"value\": null,\n    \"message\": \"تمام مصالح حاصل از تخریب و برچیدن متعلق به کارفرماست و خارج کردن آنها از محوطه کارگاه منوط به دستورکار مهندس مشاور و تصویب کارفرما است.\"\n  },\n  \"affected_items\": [],\n  \"cross_references\": [\n    \"Group: 0103\",\n    \"Group: 0104\",\n    \"Group: 0105\",\n    \"Group: 0106\",\n    \"Group: 0107\",\n    \"Group: 0108\",\n    \"Group: 0109\"\n  ]\n}\n",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:101"
+    }
+  },
+  {
+    "n": {
+      "identity": 102,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-6",
+        "raw_text": "در تخریب بناییها بابت برچیدن مصالحی مانند کلید و پریز... هزینه جداگانه ای تعلق نمیگیرد... مگر آنکه... الزام گردد که مصالح مورد نظر تفکیک... شوند که در این صورت بهای آن حسب مورد از ردیفهای مربوط محاسبه و منظور میشود.",
+        "logic_json": "\n{\n  \"rule_type\": \"Reference\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"RECLASSIFY_TO_GROUP\",\n    \"value\": \"0108\",\n    \"message\": \"به طور پیش فرض، هزینه برچیدن مصالحی مانند کلید و پریز در تخریب لحاظ شده است. اما اگر کارفرما الزام به تفکیک این مصالح کند، بهای آن باید از ردیف‌های گروه 0108 (برچیدن تاسیسات مکانیکی و برقی) محاسبه شود.\"\n  },\n  \"affected_items\": [],\n  \"cross_references\": [\n    \"Group: 0108\"\n  ]\n}\n",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:102"
+    }
+  },
+  {
+    "n": {
+      "identity": 103,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-01-Gen-7",
+        "raw_text": "ردیف های ۰۱۰۶۰۴، ۰۱۰۷۰۱ و ۰۱۰۷۱۳ برای برچیدن در و پنجره به هر نوع و شکل... میباشد و در صورتی که در یا پنجره همراه با یراق آلات برچیده شود، ردیف های تفکیکی نمیتواند مورد استفاده قرار گیرد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"NEGATE_ITEM\",\n    \"value\": null,\n    \"message\": \"ردیف های ۰۱۰۶۰۴، ۰۱۰۷۰۱ و ۰۱۰۷۱۳ برای برچیدن در و پنجره به هر نوع و شکل میباشد. در صورتی که در یا پنجره همراه با یراق آلات برچیده شود، ردیف های تفکیکی برای یراق آلات نمیتواند مورد استفاده قرار گیرد.\"\n  },\n  \"affected_items\": [\n    \"010604\",\n    \"010701\",\n    \"010713\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "General"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:103"
+    }
+  },
+  {
+    "n": {
+      "identity": 104,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-1.1",
+        "raw_text": "ردیف ۰۱۰۱۰۱ ، به سطوحی که مشمول کندن زمین میشوند و مصالح حاصل به مصرف خاکریز نمی رسد، تعلق نمی گیرد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:104"
+    }
+  },
+  {
+    "n": {
+      "identity": 105,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-2.1",
+        "raw_text": "ردیف های ۰۱۰۱۰۱ تا ۰۱۰۱۲۷ شامل هر نوع بوته نهال و درخت میباشد...",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"NONE\",\n    \"value\": \"\",\n    \"message\": \"ردیف های ۰۱۰۱۰۱ تا ۰۱۰۱۲۷ شامل هر نوع بوته، نهال و درخت میباشند.\"\n  },\n  \"affected_items\": [\n    \"010101\",\n    \"010102\",\n    \"010121\",\n    \"010122\",\n    \"010123\",\n    \"010124\",\n    \"010125\",\n    \"010126\",\n    \"010127\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:105"
+    }
+  },
+  {
+    "n": {
+      "identity": 106,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-3.1",
+        "raw_text": "ردیف ۰۱۰۱۰۱ برای هر نوع بوته که شامل ردیف ۰۱۰۱۰۲ نشود میباشد...",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:106"
+    }
+  },
+  {
+    "n": {
+      "identity": 107,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-4.1",
+        "raw_text": "فرآیند جابه جایی درختان... ۷۰ درصد بها، پس از... کاشت... و ۳۰ درصد باقی مانده در پایان مرحله نگهداری و تثبیت (۶) ماه منظور میگردد...",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:107"
+    }
+  },
+  {
+    "n": {
+      "identity": 108,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-5.1",
+        "raw_text": "در صورتی که برای جابه جایی درختان نیاز به هرس کردن آنها باشد هزینه جداگانه ای تعلق نمی گیرد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:108"
+    }
+  },
+  {
+    "n": {
+      "identity": 109,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0101-6.1",
+        "raw_text": "بهای عملیات مربوط به تهیه و حمل خاک مناسب... حسب مورد از ردیف های مربوط در فصل عملیات خاکی با دست با اعمال ضریب ۱/۲۰ منظور میشود...",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:109"
+    }
+  },
+  {
+    "n": {
+      "identity": 110,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0102-1.2",
+        "raw_text": "در سوراخ کاریهای سطوح بنایی... سوراخهای با سطح مقطع بیش از ۰/۳ متر مربع... و در سوراخ کاری های سطوح بتنی... سوراخهای با سطح مقطع بیش از ۰/۱۵ متر مربع به عنوان تخریب تلقی شده و بهای آن حسب مورد طبق ردیفهای تخریب منظور می شود.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:110"
+    }
+  },
+  {
+    "n": {
+      "identity": 111,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0102-2.2",
+        "raw_text": "ابعاد شیار مورد نیاز... باید قبل از اجرا به تایید مهندس مشاور برسد اضافه بهای ردیفهای ۰۱۰۲۰۹ و ۰۱۰۲۱۲ تا سطح مقطع حداکثر ۱۰۰ سانتی متر مربع محاسبه و منظور میگردد و مازاد بر آن از ردیفهای تخریب منظور می شود.",
+        "logic_json": "\n{\n  \"rule_type\": \"Reclassify\",\n  \"condition_logic\": \"groove_area_cm2 > 100\",\n  \"action\": {\n    \"type\": \"RECLASSIFY_TO_GROUP\",\n    \"value\": \"0104\",\n    \"message\": \"برای سطح مقطع شیار بیش از ۱۰۰ سانتی متر مربع، هزینه باید از ردیف های فصل تخریب (مانند گروه ۰۱۰۴) محاسبه و پرداخت شود.\"\n  },\n  \"affected_items\": [\n    \"010209\",\n    \"010212\"\n  ],\n  \"cross_references\": [\n    \"Group: 0104\"\n  ]\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:111"
+    }
+  },
+  {
+    "n": {
+      "identity": 112,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0102-3.2",
+        "raw_text": "بهای عملیات ایجاد شیار در موزاییک و سنگ حسب مورد از ردیفهای ۰۱۰۲۱۰ تا ۰۱۰۲۱۲ تعیین می گردد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:112"
+    }
+  },
+  {
+    "n": {
+      "identity": 113,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0103-1.3",
+        "raw_text": "...ساختمانهای خشتی چینه ای و بنایی... تخریب کلی شوند بهای آنها... طبق ردیف های ۰۱۰۳۰۱ یا ۰۱۰۳۰۲، محاسبه میگردد و ردیفهای تفکیکی نمیتواند... مورد استفاده قرار گیرد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:113"
+    }
+  },
+  {
+    "n": {
+      "identity": 114,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0103-2.3",
+        "raw_text": "بهای ردیفهای ۰۱۰۳۰۱ و ۰۱۰۳۰۲، بر حسب متر مربع زیربنای هر طبقه تعیین میشود و شامل هر نوع فونداسیون میباشد...",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"\",\n    \"value\": \"\",\n    \"message\": \"بهای این ردیف‌ها بر حسب متر مربع زیربنای هر طبقه تعیین می‌شود و شامل هر نوع فونداسیون است.\"\n  },\n  \"affected_items\": [\n    \"010301\",\n    \"010302\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:114"
+    }
+  },
+  {
+    "n": {
+      "identity": 115,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0104-1.4",
+        "raw_text": "در تخریب سطوح بنایی به طور کلی برای اندود یا پوششهای روی سطوح بهای اضافی تعلق نمی گیرد...",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:115"
+    }
+  },
+  {
+    "n": {
+      "identity": 116,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0104-2.4",
+        "raw_text": "با لحاظ نمودن ردیف ۰۱۰۴۰۴ ردیف ۰۱۰۴۰۳ منظور نمی گردد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Negation\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"NEGATE_ITEM\",\n    \"value\": \"010403\",\n    \"message\": \"با لحاظ نمودن ردیف ۰۱۰۴۰۴، ردیف ۰۱۰۴۰۳ منظور نمی گردد.\"\n  },\n  \"affected_items\": [\n    \"010404\",\n    \"010403\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:116"
+    }
+  },
+  {
+    "n": {
+      "identity": 117,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0104-3.4",
+        "raw_text": "ردیفهای ۰۱۰۴۰۵ و ۰۱۰۴۰۶ جهت تخریب بتن با استفاده از کمپرسور پیش بینی شده است. در صورتی که برای تخریب بتن از ماشین آلات سنگین راهسازی استفاده گردد حسب مورد ردیفهای مربوط با اعمال ضریب ۰/۵ منظور می گردد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Computational\",\n  \"condition_logic\": \"tool == \\\"HEAVY_MACHINERY\\\"\",\n  \"action\": {\n    \"type\": \"APPLY_COEFFICIENT\",\n    \"value\": 0.5,\n    \"message\": \"در صورتی که برای تخریب بتن از ماشین آلات سنگین راهسازی به جای کمپرسور استفاده گردد، بهای ردیف با اعمال ضریب ۰/۵ محاسبه می شود.\"\n  },\n  \"affected_items\": [\n    \"010405\",\n    \"010406\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:117"
+    }
+  },
+  {
+    "n": {
+      "identity": 118,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0104-4.4",
+        "raw_text": "چنانچه... تخریب بتن با استفاده از مواد سوزا با مواد منبسط شونده صورت پذیرد ردیفهای مربوط بر اساس دستور العمل اقلام ستاره دار تهیه می گردد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"REFER_TO_CHAPTER\",\n    \"value\": \"\",\n    \"message\": \"چنانچه تخریب بتن با استفاده از مواد سوزا یا مواد منبسط شونده صورت پذیرد، ردیف مربوطه بر اساس دستورالعمل اقلام ستاره دار تهیه می گردد.\"\n  },\n  \"affected_items\": [\n    \"010401\",\n    \"010402\",\n    \"010403\",\n    \"010404\",\n    \"010405\",\n    \"010406\",\n    \"010407\",\n    \"010408\",\n    \"010409\",\n    \"010410\",\n    \"010412\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:118"
+    }
+  },
+  {
+    "n": {
+      "identity": 119,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0104-5.4",
+        "raw_text": "بهای ردیف ۰۱۰۴۰۸ در صورت دستور کار مهندس مشاور بر حسب حجم ظاهری مصالح چیده شده منظور می شود.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:119"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0105-1.5",
+        "raw_text": "بهای ردیف ۰۱۰۵۱۲ بر حسب متر مربع سقف، محاسبه می شود.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 121,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0105-2.5",
+        "raw_text": "در بهای ردیف ۰۱۰۵۱۵ ، هزینه کندن بتن زیر و اطراف جدول منظور نشده است.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:121"
+    }
+  },
+  {
+    "n": {
+      "identity": 122,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0105-3.5",
+        "raw_text": "اجرای ردیف ۰۱۰۵۱۸، مستلزم دستور کار مهندس مشاور است.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"REQUIRE_APPROVAL\",\n    \"value\": \"مهندس مشاور\",\n    \"message\": \"اجرای این ردیف مستلزم دستور کار مهندس مشاور است.\"\n  },\n  \"affected_items\": [\n    \"010518\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:122"
+    }
+  },
+  {
+    "n": {
+      "identity": 123,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0106-1.6",
+        "raw_text": "ردیف ۰۱۰۶۱۰، برای برچیدن پوشش سقف کف یا دیوار با هر نوع مصالح با اتصال چفت شونده، پیش بینی شده است.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"\",\n    \"value\": \"\",\n    \"message\": \"ردیف ۰۱۰۶۱۰ برای برچیدن پوشش سقف، کف یا دیوار با هر نوع مصالحی که اتصال چفت شونده (interlocking) دارند، استفاده می شود.\"\n  },\n  \"affected_items\": [\n    \"010610\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:123"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0107-1.7",
+        "raw_text": "در صورت برچیدن نگهدارنده های دیوارهای بنایی... علاوه بر ردیف ۰۱۰۷۰۵ اضافه بهای ردیف ۰۱۰۷۱۰ منظور می گردد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:124"
+    }
+  },
+  {
+    "n": {
+      "identity": 125,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0107-2.7",
+        "raw_text": "اضافه بهای ردیف ۰۱۰۷۱۰ تنها به قطعات فولادی تعلق میگیرد که به صورت پراکنده برچیده شوند و در صورتی که برچیدن اسکلت فولادی به صورت جز به جز و به صورت پیوسته انجام شود اضافه بهای ردیف ۰۱۰۷۱۰ تعلق نمی گیرد.",
+        "logic_json": "\n{\n  \"rule_type\": \"Negation\",\n  \"condition_logic\": \"method == \\\"SYSTEMATIC_DISMANTLING\\\"\",\n  \"action\": {\n    \"type\": \"NEGATE_ITEM\",\n    \"value\": \"010710\",\n    \"message\": \"اضافه بهای ردیف ۰۱۰۷۱۰ برای برچیدن اسکلت فولادی به صورت جز به جز و پیوسته (سیستماتیک) تعلق نمی گیرد. این اضافه بها فقط برای قطعات پراکنده است.\"\n  },\n  \"affected_items\": [\n    \"010710\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:125"
+    }
+  },
+  {
+    "n": {
+      "identity": 126,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0108-1.8",
+        "raw_text": "کنده کاری در ارتباط با برچیدن لوله های مدفون در مصالح بنایی... در بهای ردیف های مربوط منظور شده است.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:126"
+    }
+  },
+  {
+    "n": {
+      "identity": 131,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-1.9",
+        "raw_text": "ردیف های تخریب و کندن آسفالت شامل تخریب و یا کندن قسمتی از ضخامت آسفالت نمی شود.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:131"
+    }
+  },
+  {
+    "n": {
+      "identity": 132,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-2.9",
+        "raw_text": "منظور از کندن آسفالت برای لکه گیری در ردیف ۰۱۰۹۰۳ کندن آسفالت به صورت پراکنده و ناپیوسته است...",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:132"
+    }
+  },
+  {
+    "n": {
+      "identity": 133,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-3.9",
+        "raw_text": "منظور از تخریب کلی آسفالت در ردیف ۰۱۰۹۰۹ تخریب تمام آسفالت در مسیر برای تجدید آسفالت است.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:133"
+    }
+  },
+  {
+    "n": {
+      "identity": 134,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-4.9",
+        "raw_text": "منظور از تراشیدن آسفالت در ردیف ۰۱۰۹۱۱ تراشیدن تمام یا بخشی از ضخامت آسفالت به صورت پیوسته و غیر پراکنده است.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"\",\n    \"value\": \"\",\n    \"message\": \"منظور از تراشیدن آسفالت در ردیف ۰۱۰۹۱۱، تراشیدن تمام یا بخشی از ضخامت آسفالت به صورت پیوسته و غیر پراکنده است.\"\n  },\n  \"affected_items\": [\n    \"010911\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:134"
+    }
+  },
+  {
+    "n": {
+      "identity": 135,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-5.9",
+        "raw_text": "منظور از تراش آسفالت برای لکه گیری در ردیف ،۰۱۰۹۱۵ تراش آسفالت در یک مسیر به صورت غیر پیوسته و پراکنده میباشد.",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:135"
+    }
+  },
+  {
+    "n": {
+      "identity": 136,
+      "labels": [
+        "Rule"
+      ],
+      "properties": {
+        "rule_id": "R-0109-6.9",
+        "raw_text": "ردیف های ۰۱۰۹۲۰ و ۰۱۰۹۲۱ برای برش بتن در کلیه سطوح اعم از انواع سقف بتنی دیوار بتنی و مانند آن پیش بینی شده است.",
+        "logic_json": "\n{\n  \"rule_type\": \"Informational\",\n  \"condition_logic\": \"False\",\n  \"action\": {\n    \"type\": \"\",\n    \"value\": \"\",\n    \"message\": \"ردیف های ۰۱۰۹۲۰ و ۰۱۰۹۲۱ برای برش بتن در کلیه سطوح اعم از انواع سقف بتنی، دیوار بتنی و مانند آن پیش بینی شده است.\"\n  },\n  \"affected_items\": [\n    \"010920\",\n    \"010921\"\n  ],\n  \"cross_references\": []\n}\n",
+        "scope": "Group"
+      },
+      "elementId": "4:65ea74d0-e175-4ddd-a4b9-e5c1dbd74f1f:136"
+    }
+  }
+]

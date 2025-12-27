@@ -1,0 +1,216 @@
+{
+  "chapter_info": {
+    "chapter_id": "22",
+    "title": "کارهای سنگی با سنگ پلاک",
+    "description": "Stone works with stone slabs"
+  },
+  "general_rules": [
+    {
+      "rule_id": "R-22-Gen-1",
+      "type": "Requirement",
+      "text": "All specifications (thickness, dimension, color, quarry, pattern) affecting cost must be in technical specs. Sample must be approved before procurement.",
+      "logic": "REQUIRED: Technical Specifications, Sample Approval"
+    },
+    {
+      "rule_id": "R-22-Gen-2",
+      "type": "Definition",
+      "text": "Color is market range. Province of quarry is in parentheses.",
+      "logic": "INFO: Stone color definitions based on market range."
+    },
+    {
+      "rule_id": "R-22-Gen-3",
+      "type": "Surcharge",
+      "text": "Base price is for width <= 40cm. Width > 40cm to 60cm: +35% surcharge. Width > 60cm: Starred item.",
+      "logic": "IF width <= 40: BasePrice; IF 40 < width <= 60: BasePrice * 1.35; IF width > 60: StarredItem"
+    },
+    {
+      "rule_id": "R-22-Gen-4",
+      "type": "Surcharge",
+      "text": "If both dimensions are limited or non-right angles required (cut to size/shape): +10% surcharge.",
+      "logic": "IF (limited_dimensions == True) OR (non_right_angles == True): BasePrice * 1.10"
+    },
+    {
+      "rule_id": "R-22-Gen-5",
+      "type": "Computational",
+      "text": "Base thickness: 1.5 to 2 cm. >2cm to 3cm: +25% per 0.5cm (relative to 2cm). >3cm to 4cm: +15% per 0.5cm (relative to 3cm). >4cm: Starred.",
+      "logic": "IF thickness <= 2: BasePrice; IF 2 < thickness <= 3: BasePrice * (1 + ((thickness - 2) / 0.5) * 0.25); IF 3 < thickness <= 4: Price_at_3cm * (1 + ((thickness - 3) / 0.5) * 0.15); IF thickness > 4: StarredItem"
+    },
+    {
+      "rule_id": "R-22-Gen-6",
+      "type": "Deduction",
+      "text": "If stone is axed/chiseled (tisheh/kolangi) and needs no polishing: Deduct 15% from base (2cm) price. Add surcharge 220607.",
+      "logic": "IF finish IN ['AXED', 'CHISELED'] AND polishing == False: (BasePrice * 0.85) + Item_220607"
+    },
+    {
+      "rule_id": "R-22-Gen-7",
+      "type": "Definition",
+      "text": "Up to 30 degrees from vertical: Considered Vertical. More than 30 degrees: Considered Horizontal.",
+      "logic": "IF angle_from_vertical <= 30: Surface = 'VERTICAL'; ELSE: Surface = 'HORIZONTAL'"
+    },
+    {
+      "rule_id": "R-22-Gen-8",
+      "type": "Measurement",
+      "text": "Measurement based on finished visible surface. Visible under-surfaces of sills/stairs and thickness are excluded. Area above false ceiling (if required) is included.",
+      "logic": "MEASURE: Visible_Surface_Area; EXCLUDE: Sills_Underside, Stairs_Underside, Edge_Thickness; INCLUDE: Area_Above_False_Ceiling (If Required)"
+    },
+    {
+      "rule_id": "R-22-Gen-9",
+      "type": "Inclusion",
+      "text": "White cement or color in mortar/grout for floor/facade = No extra cost.",
+      "logic": "INCLUDED: White/Colored Cement in Mortar/Grout"
+    },
+    {
+      "rule_id": "R-22-Gen-10",
+      "type": "Surcharge",
+      "text": "If joint thickness >= 3mm, grouting is paid separately under 180808.",
+      "logic": "IF joint_thickness >= 3mm: PAY_SEPARATELY(Item_180808)"
+    },
+    {
+      "rule_id": "R-22-Gen-11",
+      "type": "Specification",
+      "text": "Mortar Mix (Horizontal/Vertical): Install: Sand:Cement 1:4. Grout: White Cement:Stone Powder 1:4.",
+      "logic": "SPEC: Mortar(Sand:Cement=1:4), Grout(WhiteCement:StonePowder=1:4)"
+    },
+    {
+      "rule_id": "R-22-Gen-12",
+      "type": "Specification",
+      "text": "Mortar Mix (Rubble Stone Floor): Install 1:5, Grout 1:4.",
+      "logic": "SPEC: Rubble_Floor_Mortar(1:5), Rubble_Floor_Grout(1:4)"
+    },
+    {
+      "rule_id": "R-22-Gen-13",
+      "type": "Specification",
+      "text": "Mortar Mix (Kerb/Cubic): Install 1:3, Grout Sand:Cement 1:4.",
+      "logic": "SPEC: Kerb_Cubic_Mortar(1:3), Kerb_Cubic_Grout(Sand:Cement=1:4)"
+    },
+    {
+      "rule_id": "R-22-Gen-14",
+      "type": "Measurement",
+      "text": "Bedding Thickness: Floors: Avg 2.5cm included. Extra bedding (sand:cement) -> 50% of 180308-180310. Walls: Avg 3cm included. Extra -> 50% of 180304-180306.",
+      "logic": "SPEC: Floor_Bedding_Thickness(2.5cm), Wall_Backing_Thickness(3cm); IF Floor_Bedding > 2.5cm: PAY(0.5 * Item_1803xx); IF Wall_Backing > 3cm: PAY(0.5 * Item_1803xx)"
+    }
+  ],
+  "group_rules": [
+    {
+      "group_id": "06",
+      "title": "Execution Surcharges",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp06-1",
+          "text": "Items 220602/220603 include scope/wire.",
+          "logic": "INCLUDED: Scope, Wire in Items 220602, 220603"
+        },
+        {
+          "rule_id": "R-22-Grp06-2",
+          "text": "Thresholds (Astaneh) -> Add surcharge 220605.",
+          "logic": "IF item_type == 'THRESHOLD': ADD_SURCHARGE(Item_220605)"
+        },
+        {
+          "rule_id": "R-22-Grp06-3",
+          "text": "If 220605 used, 220601 (vertical surcharge) is NOT applied.",
+          "logic": "IF Surcharge_220605_Applied: EXCLUDE(Surcharge_220601)"
+        },
+        {
+          "rule_id": "R-22-Grp06-4",
+          "text": "Flame finish (220610) applies only to flamed area.",
+          "logic": "APPLY: Item_220610 TO Flamed_Area_Only"
+        },
+        {
+          "rule_id": "R-22-Grp06-7",
+          "text": "Stone Glue: Must be approved. Item 220620 (install with glue) is a Starred Item.",
+          "logic": "IF Method == 'GLUE': StarredItem(Item_220620); REQUIRED: Approval"
+        }
+      ]
+    },
+    {
+      "group_id": "07",
+      "title": "Surcharges for Specific Uses (Plinth, Stair, Sill)",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp07-1",
+          "text": "If using this group, 220601 (vertical surcharge) is NOT applied.",
+          "logic": "IF Group_07_Used: EXCLUDE(Surcharge_220601)"
+        },
+        {
+          "rule_id": "R-22-Grp07-3",
+          "text": "'Fitileh' (Strip) defined as cross-section <= 30 cm2. Surcharge 220713 does NOT apply to Plinth/Azareh.",
+          "logic": "DEFINITION: Fitileh_Area <= 30cm2; IF Usage IN ['PLINTH', 'AZAREH']: EXCLUDE(Surcharge_220713)"
+        }
+      ]
+    },
+    {
+      "group_id": "08",
+      "title": "Stone Kerbs",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp08-1",
+          "text": "Unit is Length (m). Includes length of stones. Measured along the path.",
+          "logic": "UNIT: Meter; MEASURE: Length_Along_Path"
+        },
+        {
+          "rule_id": "R-22-Grp08-2",
+          "text": "Grouting included. Concrete backing/sub-base paid separately. Formwork for backing paid separately.",
+          "logic": "INCLUDED: Grouting; EXCLUDED: Concrete_Backing, Formwork"
+        }
+      ]
+    },
+    {
+      "group_id": "09",
+      "title": "Cubic Stone (Cubic)",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp09-1",
+          "text": "Sub-base/leveling NOT included (pay from other chapters).",
+          "logic": "EXCLUDED: Sub_Base, Leveling, Soil_Compaction"
+        },
+        {
+          "rule_id": "R-22-Grp09-2",
+          "text": "Default: 4 cut + 2 guillotine OR 6 cut. If 10x10x10 used: +50% surcharge. If Irregular (All guillotine): 75% OF the price (Reduction).",
+          "logic": "IF Size == '10x10x10': Price * 1.50; IF Type == 'IRREGULAR_GUILLOTINE': Price * 0.75"
+        },
+        {
+          "rule_id": "R-22-Grp09-3",
+          "text": "Measurement: Area executed. Joints NOT deducted.",
+          "logic": "MEASURE: Area; DEDUCT_JOINTS: False"
+        },
+        {
+          "rule_id": "R-22-Grp09-4",
+          "text": "Slope > 20% (Ramps): +5% surcharge.",
+          "logic": "IF Slope > 20%: Price * 1.05"
+        }
+      ]
+    },
+    {
+      "group_id": "11",
+      "title": "Dry Installation",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp11-1",
+          "text": "Must follow Publication 714.",
+          "logic": "REFERENCE: Publication_714"
+        },
+        {
+          "rule_id": "R-22-Grp11-3",
+          "text": "Items include anchors/clips. Steel substructure -> Pay from Ch 16. Aluminum substructure -> Pay from Ch 17.",
+          "logic": "INCLUDED: Anchors, Clips; EXCLUDED: Steel_Substructure (Ch16), Aluminum_Substructure (Ch17)"
+        },
+        {
+          "rule_id": "R-22-Grp11-4",
+          "text": "If using 221101/221102, do NOT pay 220601.",
+          "logic": "IF Dry_Install_Items_Used: EXCLUDE(Surcharge_220601)"
+        }
+      ]
+    },
+    {
+      "group_id": "12",
+      "title": "Polishing",
+      "rules": [
+        {
+          "rule_id": "R-22-Grp12-1",
+          "text": "Base stone prices include factory polish. Site polishing (floors) paid separately if approved.",
+          "logic": "INCLUDED: Factory_Polish; EXCLUDED: Site_Polish (Requires Approval)"
+        }
+      ]
+    }
+  ]
+}
